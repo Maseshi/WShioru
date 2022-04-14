@@ -1,0 +1,55 @@
+footer,
+.footer-waves {
+    z-index: 1;
+    position: relative;
+}
+
+.footer-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--bs-light);
+}
+
+.footer-brand {
+    color: pink;
+    text-decoration: none;
+    font-family: Mitr-SemiBold;
+    font-size: 25px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.footer-brand:hover {
+    color: pink;
+    opacity: 80%;
+}
+
+.footer-brand > img {
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-link-item {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.footer-link-item > a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-link-item > a:hover {
+    color: black;
+}
+
+.footer-law {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--bs-gray-200);
+}

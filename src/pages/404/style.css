@@ -1,0 +1,46 @@
+.page-not-found {
+    min-height: 100vh;
+    text-align: center;
+}
+
+.page-not-found-center {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.page-not-found-status {
+    font-size: 150px;
+    color: var(--bs-pink);
+    font-family: 'Mitr-Bold';
+    text-shadow: var(--bs-gray-300) 5px 5px 0px;
+}
+
+.page-not-found-detail {
+    color: var(--bs-secondary);
+}
+
+.page-not-found-btn {
+    border-radius: 10px;
+}
+
+.page-not-found-btn.btn-primary,
+.page-not-found-btn.btn-primary:hover,
+.page-not-found-btn.btn-primary:active,
+.page-not-found-btn.btn-primary:visited{
+    border-color: var(--bs-pink) !important;
+    background-color: var(--bs-pink) !important;
+}
+
+.page-not-found-btn.btn-outline-primary:active,
+.page-not-found-btn.btn-outline-primary:visited,
+.page-not-found-btn.btn-outline-primary {
+    color: var(--bs-pink) !important;
+    border-color: var(--bs-pink) !important;
+}
+
+.page-not-found-btn.btn-outline-primary:hover {
+    color: white !important;
+    background-color: var(--bs-pink) !important;
+}

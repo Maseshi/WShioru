@@ -1,0 +1,25 @@
+.scroll-to-top,
+.scroll-to-top-hidden {
+    right: 18px;
+    bottom: 18px;
+    opacity: 95%;
+    z-index: 1000;
+    position: fixed;
+    border-radius: 100%;
+    padding: 12px 16px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    transition: right ease-in-out 0.3s,
+                box-shadow ease-in-out 0.3s,
+                background-color ease-in-out 0.15s,
+                opacity ease-in-out 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #eee;
+}
+
+.scroll-to-top-hidden {
+    opacity: 0;
+    right: -100px;
+}

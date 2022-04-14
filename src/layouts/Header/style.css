@@ -1,0 +1,30 @@
+.header-navbar {
+    top: 0;
+    transition: top 0.2s, 0.2s;
+}
+
+.header-brand {
+    font-size: 25px;
+    font-family: Mitr-SemiBold;
+}
+
+.navbar-hidden {
+    top: -100px;
+}
+
+.navbar-show {
+    background-color: var(--bs-light);
+}
+
+.navbar-light .header-brand.navbar-brand {
+    color: pink;
+}
+
+.header-brand>img {
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.header-brand:hover {
+    opacity: 80%;
+}

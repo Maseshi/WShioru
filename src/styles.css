@@ -1,0 +1,140 @@
+@font-face {
+    font-family: CascadiaCode;
+    src: url("./assets/fonts/CascadiaCode/ttf/CascadiaCode.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr-Bold;
+    src: url("./assets/fonts/Mitr/Mitr-Bold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr-ExtraLight;
+    src: url("./assets/fonts/Mitr/Mitr-ExtraLight.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr-Light;
+    src: url("./assets/fonts/Mitr/Mitr-Light.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr-Medium;
+    src: url("./assets/fonts/Mitr/Mitr-Medium.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr;
+    src: url("./assets/fonts/Mitr/Mitr-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Mitr-SemiBold;
+    src: url("./assets/fonts/Mitr/Mitr-SemiBold.ttf");
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    font-family: "Mitr";
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+::-moz-selection {
+    color: white;
+    background: currentColor;
+}
+
+::selection {
+    color: white;
+    background: lightblue;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: currentColor;
+    border: 3px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+h1 {
+    font-family: "Mitr-SemiBold";
+}
+
+h2 {
+    font-family: "Mitr-Medium";
+}
+
+h3 {
+    font-family: "Mitr-Medium";
+}
+
+h4 {
+    font-family: "Mitr";
+}
+
+h5 {
+    font-family: "Mitr";
+}
+
+h6 {
+    font-family: "Mitr-Light";
+}
+
+a {
+    color: var(--bs-pink);
+    transition: opacity 0.1s ease-in-out;
+}
+
+a:hover {
+    color: var(--bs-pink);
+    opacity: 80%;
+}
+
+blockquote {
+    border-left: 2px solid gainsboro;
+    border-left-width: thick;
+    padding-left: 20px;
+}
+
+code {
+    margin: 0;
+    padding: 2px 4px;
+    border-radius: 5px;
+    color: currentColor;
+    font-family: CascadiaCode;
+    background-color: #EFEFEF;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}

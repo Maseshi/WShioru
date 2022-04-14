@@ -1,0 +1,26 @@
+.invited {
+    min-height: 100vh;
+    text-align: center;
+}
+
+.invited-center {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.invited-header {
+    font-size: 90px;
+    color: var(--bs-blue);
+    font-family: 'Mitr-Bold';
+    text-shadow: var(--bs-gray-200) 8px 8px 0px;
+}
+
+.invited-content {
+    color: var(--bs-secondary);
+}
+
+.invited-btn {
+    border-radius: 10px;
+}
