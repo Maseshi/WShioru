@@ -13,9 +13,10 @@
 }
 
 .home-welcome-content>img {
-    border-radius: 20px;
+    border-radius: 100%;
     margin-bottom: 50px;
-    box-shadow: 0px 0px 30px var(--bs-gray-400);
+    border: 10px solid white;
+    box-shadow: 0px 0px 80px var(--bs-gray-400);
 }
 
 .home-welcome-btn-radius {
@@ -43,7 +44,7 @@
 .home-features-header>small,
 .home-commands-header>small,
 .home-about-header>small {
-    color: var(--bs-pink);
+    color: pink;
 }
 
 .home-features-header>h2,
@@ -111,15 +112,27 @@
 }
 
 .home-commands-table > table > :not(:first-child) {
-    border-top: 3px solid var(--bs-gray-500);
+    border-top: 3px solid var(--bs-gray-400);
 }
 
 .home-commands-table > table > thead,
+.home-commands-table > table > thead > tr,
+.home-commands-table > table > thead > tr > th,
 .home-commands-table > table > tbody,
 .home-commands-table > table > tbody > tr,
 .home-commands-table > table > tbody > tr > th,
 .home-commands-table > table > tbody > tr > td {
+    padding: 10px;
     border-style: none;
+}
+
+.home-commands-table > table > thead {
+    font-size: 20px;
+    text-align: center;
+}
+
+.home-commands-table > table > tbody > tr > th {
+    text-align: center;
 }
 
 .home-commands-table > table > tbody > tr:last-child > th {
@@ -165,6 +178,10 @@
     background-color: lightblue;
 }
 
+.home-invite i {
+    font-size: 80px;
+}
+
 .home-invite-btn-radius {
     border-radius: 10px;
 }
@@ -184,7 +201,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
@@ -270,11 +287,11 @@
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
-        border-radius: 10%;
+        border-radius: 20%;
     }
 
     100% {
-        transform: translateY(-3200px) rotate(720deg);
+        transform: translateY(-3600px) rotate(720deg);
         opacity: 0;
         border-radius: 100%;
     }
