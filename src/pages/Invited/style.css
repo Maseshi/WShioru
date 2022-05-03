@@ -14,7 +14,7 @@
     font-size: 90px;
     color: var(--bs-blue);
     font-family: 'Mitr-Bold';
-    text-shadow: var(--bs-gray-200) 8px 8px 0px;
+    text-shadow: var(--bs-gray-200) 5px 5px 0px;
 }
 
 .invited-content {
