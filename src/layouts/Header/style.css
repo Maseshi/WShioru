@@ -1,6 +1,7 @@
 .header-navbar {
     top: 0;
-    transition: top 0.2s, 0.2s;
+    opacity: 90%;
+    transition: top 0.2s, opacity 0.2s, 0.2s;
 }
 
 .header-brand {
@@ -10,6 +11,7 @@
 
 .navbar-hidden {
     top: -100px;
+    opacity: 0;
 }
 
 .navbar-show {
@@ -27,4 +29,45 @@
 
 .header-brand:hover {
     opacity: 80%;
+}
+
+.header-navbar-nav > .nav-item > .nav-link.active {
+    border-bottom: 3px solid var(--bs-primary);
+}
+
+.header-navbar-dropdown > .dropdown-menu {
+    border-radius: 10px;
+}
+
+.header-navbar-dropdown > .dropdown-toggle::after {
+    border: none;
+    content: "\F22C";
+    vertical-align: middle;
+    font-family: Bootstrap-Icons;
+}
+
+.header-navbar-dropdown > ul.dropdown-menu {
+    margin-top: 18px;
+}
+
+.header-navbar-from > .input-group > select.form-select {
+    cursor: pointer;
+}
+
+.header-navbar-from > .input-group > select.form-select:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.header-navbar-from > .input-group > select.form-select option {
+    margin-top: 20px;
+}
+
+.header-navbar-from > .input-group > select.form-select > option:disabled:is(:first-child) {
+    background-color: var(--bs-light);
+}
+
+.header-navbar-from > .input-group > select.form-select,
+.header-navbar-from > .input-group > label.input-group-text {
+    border-radius: 10px;
 }
