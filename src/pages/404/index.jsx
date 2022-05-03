@@ -1,7 +1,12 @@
+import { getCookie } from '../../utils/functions/getCookie'
+
 import './style.css'
 
 export default function PageNotFound() {
-  document.title = 'ไม่พบหน้านี้ | Shioru'
+  const language = getCookie('languageSelect') || window.navigator.userLanguage || window.navigator.language
+  const translate = require('../../languages/' + language + '.json')
+
+  document.title = translate.pages.pageNotFound.meta_title
 
   return (
     <section className="page-not-found">
@@ -9,21 +14,17 @@ export default function PageNotFound() {
         <div className="container">
           <div className="page-not-found-code">
             <span className="page-not-found-status">404</span>
-            <br />
-            <small className="page-not-found-detail">PAGE_NOT_FOUND</small>
           </div>
-          <br />
           <div className="page-not-found-description">
-            <h4>
-              เอ๋...ฉันลองหาดูหน้าที่ใกล้เคียงดูแล้วนะ แต่ไม่มีเลยอะ
-              <br />
-              คุณอาจจะกำลังหลงทางอยู่ก็ได้นะ
-            </h4>
+            <h4 dangerouslySetInnerHTML={{ __html: translate.pages.pageNotFound.description }}></h4>
+            <br />
             <div className="page-not-found-link d-grid gap-2 d-md-block">
-              <a className="page-not-found-btn btn btn-primary mx-1" href="/">กลับไปยังหน้าหลัก</a>
-              <a className="page-not-found-btn btn btn-outline-primary mx-1" href="https://stats.uptimerobot.com/gXGx1iqxop" target="_blank" rel="noreferrer">ตรวจสอบสถานะ</a>
+              <a className="page-not-found-btn btn btn-primary mx-1" href="/">{translate.pages.pageNotFound.back_to_home_page}</a>
+              <a className="page-not-found-btn btn btn-outline-primary mx-1" href="https://stats.uptimerobot.com/gXGx1iqxop" target="_blank" rel="noreferrer">{translate.pages.pageNotFound.check_status}</a>
             </div>
           </div>
+          <br />
+          <small className="page-not-found-detail">PAGE_NOT_FOUND</small>
         </div>
       </div>
     </section>
