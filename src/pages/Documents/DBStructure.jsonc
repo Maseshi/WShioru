@@ -1,0 +1,64 @@
+{
+    "en": [
+        {
+            "header": null,
+            "data": [
+                {
+                    "title": "Introduction",
+                    // Supported types.
+                    // Write it yourself, use 0: TEXT
+                    // Reference information to Github using 1: GITHUB
+                    // Reference information to external websites using 2: LINK
+                    "type": 1, // GITHUB
+                    "link": "https://github.com/Maseshi/Shioru/blob/master/documents/introduction-example.md"
+                },
+                {
+                    "title": "Commands",
+                    "type": 0, // TEXT
+                    "content": "some content",
+                    // For subpages use a data object.
+                    // Only single subpages are now supported.
+                    "data": [
+                        {
+                            "title": "Fun",
+                            "type": 0, // TEXT
+                            "content": "some content"
+                        },
+                        {
+                            "title": "Developer",
+                            "type": 1, // GITHUB
+                            "link": "https://github.com/Maseshi/Shioru/blob/master/documents/commands-developer-example.md"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "header": "ADDITIONAL",
+            "data": [
+                {
+                    "title": "Guides",
+                    "type": 0, // TEXT
+                    "content": "Loram"
+                },
+                {
+                    "title": "FAQ",
+                    "type": 2, // LINK
+                    "link": "https://example.com/faq"
+                }
+            ]
+        }
+    ],
+    "th": [
+        {
+            "header": null,
+            "data": [
+                {
+                    "title": "วิธีใช้",
+                    "type": 1, // GITHUB
+                    "link": "https://github.com/Maseshi/Shioru/blob/master/documents/how-to-use-example.md"
+                }
+            ]
+        }
+    ]
+}
