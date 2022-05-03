@@ -1,11 +1,13 @@
-export default function Commands() {
+export default function Commands(props) {
+  const translate = props.language
+
   return (
     <section className="home-commands" id="commands">
       <div className="container">
         <div className="home-commands-header">
           <small>COMMANDS</small>
-          <h2>คำสั่งเด่น</h2>
-          <p>คำสั่งเหล่านี้คือคำสั่งที่ได้รับการใช้งานที่บ่อยที่สุด สำหรับคำสั่งอื่นๆ ใช้ <code>Shelp</code></p>
+          <h2>{translate.pages.home.commands_notable_command}</h2>
+          <p dangerouslySetInnerHTML={{__html: translate.pages.home.commands_notable_command_description}}></p>
         </div>
         <br />
         <div className="home-commands-content">
@@ -13,78 +15,78 @@ export default function Commands() {
             <table className="table table-light table-striped">
               <thead>
                 <tr>
-                  <th scope="col">คำสั่ง</th>
-                  <th scope="col">คำอธิบาย</th>
+                  <th scope="col">{translate.pages.home.commands_table_name}</th>
+                  <th scope="col">{translate.pages.home.commands_table_description}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">autoplay</th>
-                  <td>เล่นเพลงต่อโดยอัตโนมัติหลังจากที่จบคิวล่าสุด</td>
+                  <td>{translate.pages.home.commands_autoplay_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">together</th>
-                  <td>สร้างห้องสำหรับใช้งาน Discord Together ซึ่งมีให้เลือกหลายตัวเลือก</td>
+                  <td>{translate.pages.home.commands_together_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">help</th>
-                  <td>สำหรับดูรายการคำสั่งทั้งหมดและรายละเอียดของคำสั่งที่ต้องการใช้งาน</td>
+                  <td>{translate.pages.home.commands_help_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">invite</th>
-                  <td>สร้างลิงค์สำหรับการเข้าร่วมเซิร์ฟเวอร์ของคุณ</td>
+                  <td>{translate.pages.home.commands_invite_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">settings</th>
-                  <td>จัดการการตั้งค่าของ Shioru เพื่อปรับแต่งเซิร์ฟเวอร์และข้อมูลส่วนบุคคลเพิ่มเติม</td>
+                  <td>{translate.pages.home.commands_settings_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">ban</th>
-                  <td>แบนสมาชิกภายในเวิร์ฟเวอร์ที่ไม่ทำตามข้อตกลงของเซิร์ฟเวอร์หรือเหตุผลอื่นๆ</td>
+                  <td>{translate.pages.home.commands_ban_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">kick</th>
-                  <td>เตะสมาชิกที่ต้องการออกจากเซิร์ฟเวอร์โดยทันที</td>
+                  <td>{translate.pages.home.commands_kick_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">purge</th>
-                  <td>ลบข้อความภายในช่องแชทจำนวนมาก โดยต้องไม่เกินกว่า 100 ข้อความ</td>
+                  <td>{translate.pages.home.commands_purge_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">unban</th>
-                  <td>ปลดแบนสมาชิกที่ถูกแบนภายในเซิร์ฟเวอร์</td>
+                  <td>{translate.pages.home.commands_unban_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">weather</th>
-                  <td>ตรวจสอบสภาพอากาศในพื้นที่ที่ต้องการได้ทั่วโลก</td>
+                  <td>{translate.pages.home.commands_weather_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">leveling</th>
-                  <td>ตรวจสอบระดับชั่นและค่าประสบการณ์ของตัวเองและสมาชิกอื่นๆ ภายในเซิร์ฟเวอร์</td>
+                  <td>{translate.pages.home.commands_leveling_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">filter</th>
-                  <td>ทำการแปลงรหัสเสียงเพลงตามที่ต้องการ ซึ่งมีให้เลือกมากกว่า 10 แบบ</td>
+                  <td>{translate.pages.home.commands_filter_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">join</th>
-                  <td>เข้าร่วมช่องเสียงหากพร้อมใช้งาน</td>
+                  <td>{translate.pages.home.commands_join_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">leave</th>
-                  <td>ออกจากช่องเสียงปัจจุบันหากพร้อมใช้งาน</td>
+                  <td>{translate.pages.home.commands_join_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">play</th>
-                  <td>เล่นเพลงจากชื่อ, ลิงค์ที่ต้องการ ซึ่งขณะนี้รองรับทั้งในแพลตฟอร์ม YouTube, Spotify และ SoundCloud</td>
+                  <td>{translate.pages.home.commands_play_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">search</th>
-                  <td>ค้นหาและเล่นเพลงเพลงที่ต้องการได้ทั้ง YouTube, Spotify และ SoundCloud</td>
+                  <td>{translate.pages.home.commands_search_description}</td>
                 </tr>
                 <tr>
                   <th scope="row">queue</th>
-                  <td>ดูเพลงและคิวที่กำลังเล่นในเซิร์ฟเวอร์ขณะนี้</td>
+                  <td>{translate.pages.home.commands_queue_description}</td>
                 </tr>
               </tbody>
             </table>

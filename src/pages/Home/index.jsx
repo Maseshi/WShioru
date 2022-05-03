@@ -9,21 +9,26 @@ import CookieAccept from '../../components/CookieAccept/index'
 import ScrollToTop from '../../components/ScrollToTop/index'
 import Waves from '../../components/Waves/index'
 
+import { getCookie } from '../../utils/functions/getCookie'
+
 import './style.css'
 
 export default function Home() {
-  document.title = 'Shioru - บอท Discord สำหรับทุกคน'
+  const language = getCookie('languageSelect') || window.navigator.userLanguage || window.navigator.language
+  const translate = require('../../languages/' + language + '.json')
+
+  document.title = translate.pages.home.meta_title
 
   return (
     <>
-      <Welcome />
+      <Welcome language={translate} />
       <Waves class={'home-wave'} r={130} g={190} b={255} />
       <div className="home-background">
-        <Features />
-        <Survey />
-        <Commands />
-        <About />
-        <Invite />
+        <Features language={translate} />
+        <Survey language={translate} />
+        <Commands language={translate} />
+        <About language={translate} />
+        <Invite language={translate} />
         <div className="home-bubbles">
           <li></li>
           <li></li>
