@@ -40,12 +40,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Bootstrap-Icons;
+    src: url("bootstrap-icons/font/fonts/bootstrap-icons.woff");
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: auto;
+    overflow-y: auto;
     overflow-x: hidden;
     font-family: "Mitr";
     scroll-behavior: smooth;
@@ -77,12 +83,12 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 100px;
-    background: currentColor;
+    background: var(--bs-gray-400);
     border: 3px solid white;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: gray;
+    background: var(--bs-gray-500);
 }
 
 h1 {
