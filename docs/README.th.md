@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Maseshi/WShioru/main/public/favicon-96x96.png" width="100">
+    <img src="https://raw.githubusercontent.com/Maseshi/WShioru/main/public/static/media/favicon-96x96.png" width="100">
     <h1>
         <strong>WShioru</strong>
     </h1>
