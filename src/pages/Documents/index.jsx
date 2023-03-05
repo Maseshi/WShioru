@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
+import DocumentMeta from 'react-document-meta'
 
 import Contents from './Contents/index'
-import Tabs from './Tabs'
+import Tabs from './Tabs/index'
 
 import CookieAccept from '../../components/CookieAccept/index'
 
-import { getCookie } from '../../utils/functions/getCookie'
+import { translator } from '../../utils/functions/translator'
 
 import './style.css'
 
@@ -15,10 +16,23 @@ export default function Documents() {
     const [loaded, setLoaded] = useState(false)
     const [pages, setPages] = useState([])
 
-    const language = getCookie('languageSelect') || window.navigator.userLanguage || window.navigator.language
-    const translate = require('../../languages/' + language + '.json')
+    const meta = {
+        title: translator().translate.pages.documents.meta_title,
+        description: translator().translate.pages.documents.meta_description,
+        canonical: '/',
+        meta: {
+            name: {
+                keywords: 'shioru, shioru-discord, discord-bot, bot',
+                subject: translator().translate.pages.documents.meta_subject,
+                language: 'TH',
+                robots: 'index, follow',
 
-    document.title = translate.pages.documents.meta_title
+                'og:type': 'website',
+                'og:image': '/shioru_banner.jpg',
+                'og:site_name': 'Shioru'
+            }
+        }
+    }
 
     const url = new URL(window.location)
     const tabParam = url.searchParams.get('tab')
@@ -27,20 +41,10 @@ export default function Documents() {
     }
 
     useEffect(() => {
-        const html = document.querySelector('html')
-        const body = document.body
-        const header = document.getElementsByTagName('header')[0]
-        const footer = document.getElementsByTagName('footer')[0]
-
-        html.style.overflow = 'hidden'
-        body.style.overflowY = 'hidden'
-        header.classList.add('header-static')
-        footer.style.display = 'none'
-
         const docRef = doc(getFirestore(), 'Documents', 'shioru')
         getDoc(docRef).then((docSnap) => {
             if (docSnap.exists()) {
-                const document = docSnap.data()[language]
+                const document = docSnap.data()[translator().code]
                 const pagesID = pages
 
                 if (document) document.map(item => {
@@ -78,23 +82,25 @@ export default function Documents() {
                 setLoaded(true)
             }
         })
-    }, [pages, language])
+    }, [pages])
 
     return (
-        <>
+        <DocumentMeta {...meta}>
             <section className="documents">
-                <button className="documents-navbar-toggle navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocuments" aria-controls="offcanvasDocuments">
-                    <i className="bi bi-three-dots-vertical"></i>
-                </button>
+                <div className="navbar-expand-lg">
+                    <button className="documents-navbar-toggle navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDocuments" aria-controls="offcanvasDocuments">
+                        <i className="bi bi-three-dots-vertical"></i>
+                    </button>
+                </div>
                 <div className="row">
                     <div className="documents-col-tab col-md-3">
-                        <Tabs translate={translate} documents={documents} loaded={loaded} pages={pages} parameter={parameter} />
+                        <Tabs translate={translator().translate} documents={documents} loaded={loaded} pages={pages} parameter={parameter} />
                     </div>
                     <div className="documents-col-content col-md-9">
                         <div className="documents-content d-flex flex-column">
                             <div className="documents-content-data">
                                 <div className="container">
-                                    <Contents translate={translate} documents={documents} loaded={loaded} pages={pages} parameter={parameter} />
+                                    <Contents translate={translator().translate} documents={documents} loaded={loaded} pages={pages} parameter={parameter} />
                                 </div>
                             </div>
                         </div>
@@ -102,6 +108,6 @@ export default function Documents() {
                 </div>
             </section>
             <CookieAccept />
-        </>
+        </DocumentMeta>
     )
 }

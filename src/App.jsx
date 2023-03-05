@@ -1,11 +1,8 @@
 import { BrowserRouter } from 'react-router-dom'
 import { initializeApp } from "firebase/app"
 import { getAnalytics } from "firebase/analytics"
-import { getPerformance } from "firebase/performance";
-import {
-  initializeAppCheck,
-  ReCaptchaV3Provider
-} from 'firebase/app-check'
+import { getPerformance } from "firebase/performance"
+import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check'
 import '@popperjs/core/dist/umd/popper.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -34,13 +31,14 @@ export default function App() {
     "measurementId": config.server.MEASUREMENT_ID
   })
 
+  initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider(config.RECAPTCHA),
+    isTokenAutoRefreshEnabled: true
+  })
+
   if (process.env.NODE_ENV === 'production') {
     getAnalytics(app)
     getPerformance(app)
-    initializeAppCheck(app, {
-      provider: new ReCaptchaV3Provider(config.RECAPTCHA_V3_PROVIDER),
-      isTokenAutoRefreshEnabled: true
-    })
   }
 
   return (

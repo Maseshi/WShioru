@@ -1,4 +1,4 @@
-import langSupport from './languages.json'
+import languagesSupport from './languages.json'
 
 const config = {
   server: {
@@ -11,8 +11,9 @@ const config = {
     APP_ID: process.env.REACT_APP_APP_ID,
     MEASUREMENT_ID: process.env.REACT_APP_MEASUREMENT_ID
   },
-  RECAPTCHA_V3_PROVIDER: process.env.REACT_APP_RECAPTCHA_V3_PROVIDER,
-  languages: langSupport
+  RECAPTCHA: process.env.REACT_APP_RECAPTCHA,
+  OCTOKIT: process.env.REACT_APP_OCTOKIT,
+  languages: languagesSupport
 }
 
 export default config

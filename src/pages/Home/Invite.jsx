@@ -13,7 +13,7 @@ export default function Invite(props) {
                     <span dangerouslySetInnerHTML={{__html: translate.pages.home.invite_are_you_ready_description}}></span>
                     <br />
                     <br />
-                    <a className="home-invite-btn-radius btn btn-primary" href="https://discord.com/api/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=applications.commands%20bot">{translate.pages.home.invite_invite_now}</a>
+                    <a className="home-invite-btn-radius btn btn-primary" href="/invite">{translate.pages.home.invite_invite_now}</a>
                 </div>
             </section>
         </>

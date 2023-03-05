@@ -1,11 +1,22 @@
 .header-navbar {
     top: 0;
-    opacity: 90%;
-    transition: top 0.2s, opacity 0.2s, 0.2s;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    position: fixed;
+    transition: top 0.2s, 0.2s;
+}
+
+.header-static > .navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header-brand {
     font-size: 25px;
+    text-shadow: 2px 2px 0px white;
     font-family: Mitr-SemiBold;
 }
 
@@ -15,7 +26,10 @@
 }
 
 .navbar-show {
-    background-color: var(--bs-light);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 20px 0 rgb(0 0 0 / 10%);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar-light .header-brand.navbar-brand {
@@ -27,8 +41,29 @@
     margin-right: 10px;
 }
 
+.header-brand {
+    transition: opacity 0.2s;
+}
+
 .header-brand:hover {
     opacity: 80%;
+}
+
+.header-navbar-toggle {
+    border-radius: 10px;
+}
+
+.header-navbar > .container > .offcanvas {
+    border: 0;
+}
+
+.header-navbar-nav > .nav-item > .nav-link {
+    border-bottom-color: var(--bs-gray-200);
+    transition: border-bottom 0.2s;
+}
+
+.header-navbar-nav > .nav-item > .nav-link:hover {
+    border-bottom: 3px solid var(--bs-gray-200);
 }
 
 .header-navbar-nav > .nav-item > .nav-link.active {
@@ -50,24 +85,24 @@
     margin-top: 18px;
 }
 
-.header-navbar-from > .input-group > select.form-select {
+.header-navbar-form > .input-group > select.form-select {
     cursor: pointer;
 }
 
-.header-navbar-from > .input-group > select.form-select:focus {
+.header-navbar-form > .input-group > select.form-select:focus {
     box-shadow: none;
     border-color: #ced4da;
 }
 
-.header-navbar-from > .input-group > select.form-select option {
+.header-navbar-form > .input-group > select.form-select option {
     margin-top: 20px;
 }
 
-.header-navbar-from > .input-group > select.form-select > option:disabled:is(:first-child) {
+.header-navbar-form > .input-group > select.form-select > option:disabled:is(:first-child) {
     background-color: var(--bs-light);
 }
 
-.header-navbar-from > .input-group > select.form-select,
-.header-navbar-from > .input-group > label.input-group-text {
+.header-navbar-form > .input-group > select.form-select,
+.header-navbar-form > .input-group > label.input-group-text {
     border-radius: 10px;
 }

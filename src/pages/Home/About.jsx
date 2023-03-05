@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function About(props) {
   const translate = props.language;
 

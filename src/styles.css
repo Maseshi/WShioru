@@ -49,14 +49,21 @@ html,
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
     font-family: "Mitr";
     scroll-behavior: smooth;
+    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+
+    -moz-box-sizing: border-box;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .selector-for-some-widget {
@@ -143,4 +150,42 @@ code {
 section {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+/* Custom Modal Backdrop */
+.modal-backdrop,
+.modal-backdrop.show {
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  background-color: rgba(248, 249, 250, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Tooltip */
+[data-title] {
+  position: relative;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -33px;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: var(--bs-dark);
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+[data-title]:hover::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  display: inline-block;
+  color: #fff;
+  border: 8px solid transparent;	
+  border-top: 8px solid var(--bs-dark);
 }
