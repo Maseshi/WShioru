@@ -8,11 +8,12 @@
   },
   "layouts": {
     "footer": {
-      "all_rights_reserved": "&copy; 2565 Chaiwat Suwannarat. สงวนลิขสิทธิ์",
+      "all_rights_reserved": "&copy; 2565 - 2566 Chaiwat Suwannarat. สงวนลิขสิทธิ์",
       "footer_description": "ผู้ช่วยเซิร์ฟเวอร์ Discord ที่ดีที่สุดจะช่วยให้เซิร์ฟเวอร์ของคุณดูมีชีวิตชีวาและน่าอยู่มากยิ่งขึ้น",
       "if_you_need_to_contact": "หากมีข้อสงสัยใดๆ สามารถติดต่อได้ที่:",
       "other_links": "ลิงค์อื่น ๆ",
       "other_links_privacy_policy": "นโยบายความเป็นส่วนตัว",
+      "other_links_status": "สถานะของระบบ",
       "other_links_terms_of_service": "เงื่อนไขการให้บริการ",
       "privacy_policy": "นโยบายความเป็นส่วนตัว",
       "resources": "แหล่งข้อมูล",
@@ -20,18 +21,42 @@
       "terms_of_service": "เงื่อนไขการให้บริการ"
     },
     "header": {
-      "about": "เกี่ยวกับ",
       "all_items": "รายการทั้งหมด",
       "commands": "คำสั่ง",
-      "developers": "ผู้พัฒนา",
       "documents": "เอกสาร",
       "features": "คุณสมบัติ",
       "invite_to_join": "เชิญเข้าร่วม",
-      "language": "ภาษา",
-      "status": "สถานะ"
+      "language": "ภาษา"
     }
   },
   "pages": {
+    "commands": {
+      "body_all_commands": "คำสั่งทั้งหมด",
+      "body_commands_give_feedback": "ให้ข้อเสนอแนะ",
+      "body_commands_not_found": "หาคำสั่งไม่เจอหรอ?",
+      "body_commands_not_found_description": "บางทีคำสั่งที่คุณกำลังหาอาจจะไม่มีก็ได้นะ อยากลองให้ข้อเสนอแนะดูไหม?",
+      "body_data_not_found": "ไม่พบข้อมูล",
+      "body_data_not_found_detail": "ไม่สามารถรับข้อมูลได้ชั่วคราวในขณะนี้ โปรดลองกลับมาใหม่อีกครั้งในภายหลัง",
+      "body_description": "คุณสามารถทดลองใช้งานได้โดยพิมพ์คำสั่งเริ่มต้น <code>/</code> จากนั้นคำสั่งต่าง ๆ จะปรากฎ สำหรับการใช้งานเพิ่มเติมสามารถดูได้จากข้อมูลคำสั่งด้านล่างนี้",
+      "body_how_to_use": "วิธีใช้งาน",
+      "body_note": "หมายเหตุ",
+      "body_note_description": "คำสั่งบางรายการอาจมีเงื่อนไขที่ไม่ตรงกับข้อมูลที่มีอยู่ ทั้งนี้เราจะรีบดำเนินการตรวจสอบให้ตรงตามเงื่อนไขที่เรากำหนดไว้",
+      "body_note_first_condition_mean": "() หมายถึง ข้อมูลที่ไม่จำเป็นต้องเพิ่ม",
+      "body_note_second_condition_mean": "<> หมายถึง ข้อมูลที่จำเป็นต้องเพิ่ม",
+      "body_permission_bot": "บอท",
+      "body_permission_none": "ไม่มี",
+      "body_permissions": "การขออนุญาต",
+      "body_permission_user": "ผู้ใช้",
+      "body_search_commands": "ค้นหาคำสั่ง",
+      "body_type_to_search_commands": "พิมพ์ค้นหาคำสั่ง...",
+      "header_commands": "คำสั่ง",
+      "header_description": "แหล่งรวบรวมคำสั่งทั้งหมดของ Shioru ที่พร้อมใช้งานในขณะนี้",
+      "header_join_discord_server": "เข้าร่วมกลุ่ม",
+      "header_learn_more": "สำรวจเพิ่มเติม",
+      "meta_description": "แหล่งข้อมูลคำสั่งแอปพลิเคชั่นทั้งหมดของ Shioru พร้อมรายละเอียดของคำสั่ง, วิธีใช้งานและข้อมูลอื่น ๆ ที่น่าสนใจและมีประโยชน์",
+      "meta_subject": "คำสั่งทั้งของ Shioru ที่พร้อมใช้งาน",
+      "meta_title": "คำสั่ง | Shioru"
+    },
     "documents": {
       "contents_data_next": "ต่อไป",
       "contents_data_previous": "ก่อนหน้า",
@@ -50,8 +75,10 @@
       "contents_error_unknown_type_description": "ไม่สามารถโหลดข้อมูลจากเอกสารนี้ได้ เนื่องจากเป็นประเภทที่ไม่รู้จัก กรุณาติดต่อผู้ดูแลระบบ",
       "contents_page_not_found": "ไม่พบหน้าดังกล่าว",
       "contents_page_not_found_description": "ไม่สามารถโหลดหน้าดังกล่าวได้ อาจเป็นเพราะถูกย้ายหรือลบไปแล้ว",
+      "meta_description": "เอกสารข้อมูลเกี่ยวกับวิธีใช้งาน การใช้คำสั่ง ข้อมูลอื่นๆ ที่จำเป็นสำหรับที่มีใน Shioru",
+      "meta_subject": "เอกสารเกี่ยวกับบอท",
       "meta_title": "เอกสาร | Shioru",
-      "tabs_all_rights_reserved": "&copy; 2565 Maseshi. สงวนลิขสิทธิ์",
+      "tabs_all_rights_reserved": "&copy; 2565 - 2566 Maseshi. สงวนลิขสิทธิ์",
       "tabs_condition": "เงื่อนไข",
       "tabs_documents_list": "รายการเอกสาร",
       "tabs_policy": "นโยบาย"
@@ -98,18 +125,28 @@
       "invite_are_you_ready": "พร้อมแล้วหรือยัง?",
       "invite_are_you_ready_description": "เชิญชวน Shioru เข้าร่วมเซิร์ฟเวอร์ของคุณ<br />พร้อมกับเพลิดเพลินไปกับคุณสมบัติเหล่านี้เลย",
       "invite_invite_now": "เชิญชวนเลย",
+      "meta_description": "ผู้ช่วยเซิร์ฟเวอร์ Discord ที่ดีที่สุดจะช่วยให้เซิร์ฟเวอร์ของคุณดูมีชีวิตชีวาและน่าอยู่มากยิ่งขึ้น",
+      "meta_subject": "บอท Shioru สำหรับ Discord",
       "meta_title": "Shioru - บอท Discord สำหรับทุกคน",
       "survey_commands": "คำสั่ง",
       "survey_members": "สมาชิก",
       "survey_servers": "เซิร์ฟเวอร์",
       "survey_worked": "ทำงานแล้ว",
+      "welcome_buy_me_coffee": "ซื้อกาแฟให้ฉัน",
+      "welcome_discord_server": "เซิร์ฟเวอร์ชุมชน (เร็วๆ นี้)",
       "welcome_invite": "เชิญชวน",
       "welcome_ready_to_join_your_server": "พร้อมที่จะเข้าร่วมเซิร์ฟเวอร์ของคุณแล้ว",
       "welcome_support": "สนับสนุน",
+      "welcome_support_method": "เลือกวิธีการสนับสนุน",
+      "welcome_support_modal_description": "ทุกบาททุกสตางค์ของท่านช่วยให้ผมทำโครงการอื่น ๆ ต่อไปได้",
+      "welcome_support_modal_thank_you": "❤ ขอขอบคุณล่วงหน้าที่คอยสนับสนุนอยู่ตลอดเวลา",
+      "welcome_support_through_true_money": "สนับสนุนผ่าน True Money",
       "welcome_the_best_bot": "ผู้ช่วยเซิร์ฟเวอร์ Discord ที่ดีที่สุด"
     },
     "invited": {
       "home_page": "หน้าหลัก",
+      "meta_description": "เชิญชวน Shioru เข้าร่วมเซิร์ฟเวอร์เรียบร้อยแล้ว เริ่มมาพูดคุยได้เลย!!",
+      "meta_subject": "ขอขอบคุณที่เชิญ Shioru เข้าร่วมเซิร์ฟเวอร์",
       "meta_title": "ขอขอบคุณ | Shioru",
       "support": "สนับสนุน",
       "thanks_you": "ขอขอบคุณ!!",
@@ -119,6 +156,8 @@
       "back_to_home_page": "กลับไปยังหน้าหลัก",
       "check_status": "ตรวจสอบสถานะ",
       "description": "เอ๋...ฉันลองหาดูหน้าที่ใกล้เคียงดูแล้วนะ แต่ไม่มีเลยอะ <br /> คุณอาจจะกำลังหลงทางอยู่ก็ได้นะ",
+      "meta_description": "ดูเหมือนว่าคุณกำลังจะหลงทาง ที่ที่คุณกำลังดูอยู่อาจถูกลบหรือย้ายไปแล้ว",
+      "meta_subject": "ไม่พบหน้าดังกล่าวในเว็บไซต์นี้",
       "meta_title": "ไม่พบหน้านี้ | Shioru"
     }
   }

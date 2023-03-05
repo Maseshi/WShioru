@@ -8,11 +8,12 @@
   },
   "layouts": {
     "footer": {
-      "all_rights_reserved": "&copy; 2022 Chaiwat Suwannarat. All rights reserved",
+      "all_rights_reserved": "&copy; 2022 - 2023 Chaiwat Suwannarat. All rights reserved",
       "footer_description": "The best Discord server assistants will make your server look more lively and liveable.",
       "if_you_need_to_contact": "If you have any questions can be contacted at:",
       "other_links": "Other links",
       "other_links_privacy_policy": "Privacy Policy",
+      "other_links_status": "System Status",
       "other_links_terms_of_service": "Terms of Service",
       "privacy_policy": "Privacy Policy",
       "resources": "Resources",
@@ -20,18 +21,42 @@
       "terms_of_service": "Terms of Service"
     },
     "header": {
-      "about": "About",
       "all_items": "All items",
       "commands": "Commands",
-      "developers": "Developers",
       "documents": "Documents",
       "features": "Features",
       "invite_to_join": "Invite to join",
-      "language": "Language",
-      "status": "Status"
+      "language": "Language"
     }
   },
   "pages": {
+    "commands": {
+      "body_all_commands": "All commands",
+      "body_commands_give_feedback": "Give feedback",
+      "body_commands_not_found": "Can't find commands?",
+      "body_commands_not_found_description": "Maybe the command you're looking for doesn't exist. Would you like to try and give some feedback?",
+      "body_data_not_found": "No data found",
+      "body_data_not_found_detail": "Temporarily unable to get data at this time. Please try again later.",
+      "body_description": "You can test it by typing the default command <code>/</code> Then the various commands will appear. For further use, please refer to the command information below.",
+      "body_how_to_use": "How to use",
+      "body_note": "Note",
+      "body_note_description": "Some commands may contain conditions that do not match existing information. In this regard, we will hurry to verify that it meets the conditions we set.",
+      "body_note_first_condition_mean": "() means data that does not need to be added.",
+      "body_note_second_condition_mean": "<> means information that needs to be added.",
+      "body_permission_bot": "Bot",
+      "body_permission_none": "None",
+      "body_permissions": "Permissions",
+      "body_permission_user": "User",
+      "body_search_commands": "Search commands",
+      "body_type_to_search_commands": "Type search commands...",
+      "header_commands": "Commands",
+      "header_description": "A collection of all Shioru commands currently available.",
+      "header_join_discord_server": "Join Discord",
+      "header_learn_more": "Explore more",
+      "meta_description": "Shioru's full source of application commands with descriptions of commands, how to use them, and other interesting and useful information.",
+      "meta_subject": "All Shioru commands available",
+      "meta_title": "Command | Shioru"
+    },
     "documents": {
       "contents_data_next": "Next",
       "contents_data_previous": "Previous",
@@ -50,8 +75,10 @@
       "contents_error_unknown_type_description": "Failed to load data from this document. because it is an unknown type. Please contact the administrator",
       "contents_page_not_found": "The page could not be found.",
       "contents_page_not_found_description": "The page could not be loaded. It may be because it has been moved or deleted.",
+      "meta_description": "Documentation on how to use it, how to use the commands, and other information needed to be available in Shioru.",
+      "meta_subject": "Bot documentation",
       "meta_title": "Document | Shioru",
-      "tabs_all_rights_reserved": "&copy; 2022 Maseshi. All rights reserved",
+      "tabs_all_rights_reserved": "&copy; 2022 - 2023 Maseshi. All rights reserved",
       "tabs_condition": "Condition",
       "tabs_documents_list": "Documents List",
       "tabs_policy": "Policy"
@@ -98,18 +125,28 @@
       "invite_are_you_ready": "Are you ready?",
       "invite_are_you_ready_description": "Invite Shioru to your server<br />Ready to enjoy these features",
       "invite_invite_now": "Invite now",
+      "meta_description": "The best Discord server assistants will make your server look more lively and liveable.",
+      "meta_subject": "Shioru bot for Discord",
       "meta_title": "Shioru - Discord bot for everyone",
       "survey_commands": "COMMANDS",
       "survey_members": "MEMBERS",
       "survey_servers": "SERVERS",
       "survey_worked": "WORKED",
+      "welcome_buy_me_coffee": "Buy me a coffee",
+      "welcome_discord_server": "Community Server (coming soon)",
       "welcome_invite": "Invite",
       "welcome_ready_to_join_your_server": "Ready to join your server.",
       "welcome_support": "Support",
+      "welcome_support_method": "Choose a support method",
+      "welcome_support_modal_description": "Every baht and every penny of yours helps me to continue with other projects.",
+      "welcome_support_modal_thank_you": "❤ Thank you in advance for your continued support",
+      "welcome_support_through_true_money": "Support via True Money",
       "welcome_the_best_bot": "Best Discord Server Assistant"
     },
     "invited": {
       "home_page": "Home page",
+      "meta_description": "Shioru has been invited to join the server. Let's start talking!!",
+      "meta_subject": "Thank you for inviting Shioru to join the server.",
       "meta_title": "Thank you | Shioru",
       "support": "Support",
       "thanks_you": "Thank you!!",
@@ -119,6 +156,8 @@
       "back_to_home_page": "Back to home page",
       "check_status": "Check Status",
       "description": "Eh...I've been looking for a nearby page. But no <br /> You might be lost.",
+      "meta_description": "Looks like you're lost. The one you are currently viewing may have been deleted or moved.",
+      "meta_subject": "The page could not be found on this site.",
       "meta_title": "Can't find this page | Shioru"
     }
   }
