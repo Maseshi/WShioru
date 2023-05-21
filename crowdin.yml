@@ -1,3 +1,5 @@
 files:
   - source: /src/languages/th.json
-    translation: /src/languages/%two_letters_code%.json
+    ignore:
+      - /src/languages/*.md
+    translation: /src/languages/%osx_locale%.json
