@@ -6,6 +6,7 @@ import {
   RectangleStackIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 interface Stats {
   commands: number;
@@ -16,6 +17,8 @@ interface Stats {
 
 export default function HomeStats() {
   const [stats, setStats] = useState<Stats | null>();
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const getStats = async () => {
@@ -37,59 +40,49 @@ export default function HomeStats() {
       id="stats"
     >
       <div className="container mx-auto px-4">
-        {/* <h2 className="text-center text-4xl font-bold">
-          <span className="from-primary to-secondary bg-linear-to-r bg-clip-text text-transparent">
-            ได้รับความไว้วางใจ
-          </span>
-          จากชุมชน Discord
-        </h2>
-        <p className="mx-auto max-w-md py-2 pb-12 text-center">
-          Shioru
-          ช่วยเหลือชุมชนหลายพันแห่งด้วยบริการที่เชื่อถือได้และฟีเจอร์ที่น่าพึงพอใจ
-        </p> */}
         <div className="stats bg-secondary/10 shadow-secondary stats-vertical lg:stats-horizontal w-full justify-stretch rounded-xl shadow-2xl/10">
           <div className="stat">
             <div className="stat-figure text-secondary">
               <CodeBracketIcon className="inline-block size-8 stroke-current" />
             </div>
-            <div className="stat-title">คำสั่ง</div>
+            <div className="stat-title">{t("commands")}</div>
             <div className="stat-value">
               {new Intl.NumberFormat().format(stats?.commands as number)}
             </div>
-            <div className="stat-desc">คำสั่งทั้งหมดที่รองรับ</div>
+            <div className="stat-desc">{t("allCommandsAvailable")}</div>
           </div>
 
           <div className="stat">
             <div className="stat-figure text-secondary">
               <RectangleStackIcon className="inline-block size-8 stroke-current" />
             </div>
-            <div className="stat-title">กิลด์</div>
+            <div className="stat-title">{t("guilds")}</div>
             <div className="stat-value">
               {new Intl.NumberFormat().format(stats?.guilds as number)}
             </div>
-            <div className="stat-desc">กิลด์ที่ Shioru ได้เข้าร่วม</div>
+            <div className="stat-desc">{t("guildThatShioruHasJoined")}</div>
           </div>
 
           <div className="stat">
             <div className="stat-figure text-secondary">
               <UserGroupIcon className="inline-block size-8 stroke-current" />
             </div>
-            <div className="stat-title">สมาชิก</div>
+            <div className="stat-title">{t("members")}</div>
             <div className="stat-value">
               {new Intl.NumberFormat().format(stats?.users as number)}
             </div>
-            <div className="stat-desc">สมาชิกทั้งหมดที่นับได้</div>
+            <div className="stat-desc">{t("allCountedMembers")}</div>
           </div>
 
           <div className="stat">
             <div className="stat-figure text-secondary">
               <CheckCircleIcon className="inline-block size-8 stroke-current" />
             </div>
-            <div className="stat-title">ทำงานแล้ว</div>
+            <div className="stat-title">{t("worked")}</div>
             <div className="stat-value">
               {new Intl.NumberFormat().format(stats?.worked as number)}
             </div>
-            <div className="stat-desc">จำนวนการทำงานที่เสร็จสิ้น</div>
+            <div className="stat-desc">{t("allSuccessTasks")}</div>
           </div>
         </div>
       </div>

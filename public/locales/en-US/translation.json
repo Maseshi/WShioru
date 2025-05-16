@@ -83,5 +83,12 @@
   "accept": "Accept",
   "documentNotFound": "No documentation found for language \"{{locate}}\".",
   "discordBot": "Discord Bot",
-  "aboutThisWebsite": "Your best personal assistants will help your guild look more lively. She can do so many things that you can easily see detailed information on all commands by typing /help."
+  "aboutThisWebsite": "Your best personal assistants will help your guild look more lively. She can do so many things that you can easily see detailed information on all commands by typing /help.",
+  "allCommandsAvailable": "All available commands.",
+  "guilds": "Guilds",
+  "guildThatShioruHasJoined": "Guilds that Shioru joined.",
+  "members": "Members",
+  "allCountedMembers": "All counted members.",
+  "worked": "Worked",
+  "allSuccessTasks": "Number of tasks completed."
 }
