@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { CookieIcon } from "@/components/Icons/Cookie";
@@ -8,17 +9,23 @@ export default function Cookies() {
   const { t } = useTranslation();
   const { get, set } = useCookie();
 
+  const [accept, setAccept] = useState(
+    get("cookies") === "allow" ? true : false,
+  );
+
   const handleDenyCookiesPolicy = () => {
     set("cookies", "deny", { expires: 60 });
+    setAccept(false);
   };
   const handleAllowCookiesPolicy = () => {
     set("cookies", "allow", { expires: 60 });
+    setAccept(true);
   };
 
   return (
     <div
       role="alert"
-      className={`alert alert-vertical sm:alert-horizontal bg-base-100/80 fixed inset-x-4 bottom-4 z-30 mx-auto max-w-md rounded-xl shadow-md backdrop-blur-sm transition-all ease-in-out ${get("cookies") ? "hidden" : ""}`}
+      className={`alert alert-vertical sm:alert-horizontal bg-base-100/80 fixed inset-x-4 bottom-4 z-30 mx-auto max-w-md rounded-xl shadow-md backdrop-blur-sm transition-all ease-in-out ${accept ? "hidden" : ""}`}
     >
       <CookieIcon className="text-primary size-6" />
       <div>
