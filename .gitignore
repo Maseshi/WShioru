@@ -29,7 +29,6 @@ dist-ssr
 .firebaserc
 
 # Firebase Hosting
-/firebase.json
 *.cache
 hosting/.cache
 
