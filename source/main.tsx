@@ -48,6 +48,10 @@ i18n
       escapeValue: false, // not needed for react as it escapes by default
     },
   });
+i18n.on("languageChanged", (lng) => {
+  // Set HTML lang attribute when language changes
+  document.documentElement.lang = lng;
+});
 
 export default function App() {
   const app = initializeApp(configs.firebase);

@@ -24,16 +24,14 @@ export default function PrivacyPolicy() {
 
   return (
     <article>
-      <title>Privacy Policy | Shioru's</title>
-      <meta
-        name="description"
-        content="The information we collect includes the retention of Shioru user's information."
-      />
-      <meta property="og:title" content="Privacy Policy | Shioru's" />
+      <title>{`${t("privacyPolicy")} | Shioru's`}</title>
+      <meta name="description" content={t("weCareAboutYourPrivacy")} />
+      <meta property="og:title" content={`${t("privacyPolicy")} | Shioru's`} />
       <meta
         property="og:description"
-        content="The information we collect includes the retention of Shioru user's information."
+        content={t("weCareAboutYourPrivacy")}
       />
+      <meta property="og:url" content="https://shiorus.web.app/privacy-policy" />
       <header className="hero">
         <div className="hero-content text-center">
           <div>
