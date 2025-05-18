@@ -35,7 +35,7 @@ git clone https://github.com/Maseshi/WShioru.git
 cd WShioru
 npm install
 ```
-
+- Select the project in Firebase with the command `firebase --project <project_id>`. After running this command, a **.firebaserc** file should be created.
 - Change the file name `.env.local.example` to `.env.local` and enter all required values.
 - Start to develop website by typing `npm run dev`.
 
