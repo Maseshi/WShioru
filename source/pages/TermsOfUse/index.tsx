@@ -24,16 +24,14 @@ export default function TermsOfUse() {
 
   return (
     <article>
-      <title>Terms of Use | Shioru's</title>
-      <meta
-        name="description"
-        content="Shioru's service goals and what not to do."
-      />
-      <meta property="og:title" content="Terms of Use | Shioru's" />
+      <title>{`${t("termsOfUse")} | Shioru's`}</title>
+      <meta name="description" content={t("servicesGoal")} />
+      <meta property="og:title" content={`${t("termsOfUse")} | Shioru's`} />
       <meta
         property="og:description"
-        content="Shioru's service goals and what not to do."
+        content={t("servicesGoal")}
       />
+      <meta property="og:url" content="https://shiorus.web.app/terms-of-use" />
       <header className="hero">
         <div className="hero-content text-center">
           <div>

@@ -24,12 +24,14 @@ export default function CookiePolicy() {
 
   return (
     <article>
-      <title>Cookie Policy | Shioru's</title>
+      <title>{`${t("cookiePolicy")} | Shioru's`}</title>
+      <meta name="description" content={t("learnMoreAboutCookiesPolicy")} />
+      <meta property="og:title" content={`${t("cookiePolicy")} | Shioru's`} />
       <meta
-        name="description"
-        content="Learn more about the cookies we collect from Shioru."
+        property="og:description"
+        content={t("learnMoreAboutCookiesPolicy")}
       />
-      <meta property="og:title" content="Cookie Policy | Shioru's" />
+      <meta property="og:url" content="https://shiorus.web.app/cookie-policy" />
       <header className="hero">
         <div className="hero-content text-center">
           <div>
