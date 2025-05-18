@@ -50,8 +50,9 @@ export default function HomeGreeting() {
       <div className="hero min-h-screen">
         <div className="hero-content grid grid-cols-1 lg:grid-cols-2">
           <img
-            className="animate-float mx-auto h-80 max-w-sm lg:order-last lg:h-auto"
+            className="animate-float mx-auto h-80 w-auto max-w-sm lg:order-last lg:h-auto"
             src={shioruSandImage}
+            fetchPriority="high"
             alt={t("shioruStandAlternate")}
           />
           <div className="text-center lg:order-first lg:text-left">
