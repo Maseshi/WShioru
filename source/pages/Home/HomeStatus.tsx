@@ -9,7 +9,7 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import shioruSitImage from "@/assets/images/shioru-sit.png";
+import shioruSitImage from "@/assets/images/shioru-sit.webp";
 
 import configs from "@/config";
 
@@ -165,7 +165,7 @@ export default function HomeStatus() {
         <p className="py-2">{t("shioruIsUnderCare")}</p>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <img
-            className="animate-breathe mx-auto max-w-sm self-end lg:order-last"
+            className="animate-breathe mx-auto size-auto max-w-sm self-end lg:order-last"
             src={shioruSitImage}
             alt={t("shioruSitAlternate")}
           />
