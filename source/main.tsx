@@ -70,6 +70,15 @@ export default function App() {
           <Route path="/" element={<Layouts />}>
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
+            <Route
+              path="invite"
+              Component={() => {
+                window.location.replace(
+                  "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
+                );
+                return null;
+              }}
+            />
             <Route path="terms-of-use" element={<TermsOfUse />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="cookie-policy" element={<CookiePolicy />} />
