@@ -10,7 +10,7 @@ const config = {
     measurementId: import.meta.env.VITE_MEASUREMENT_ID,
   },
   recaptcha: import.meta.env.VITE_RECAPTCHA,
-  statuspageId: import.meta.env.VITE_STATUSPAGE_ID,
+  statuspageId: "shioru",
 };
 
 export default config;
