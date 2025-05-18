@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import { getDatabase, ref, get } from "firebase/database";
 
-import shioruSandImage from "@/assets/images/shioru-stand.png";
+import shioruSandImage from "@/assets/images/shioru-stand.webp";
 
 import { DiscordIcon } from "@/components/Icons/Discord";
 

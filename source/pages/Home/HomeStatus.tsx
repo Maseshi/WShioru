@@ -9,7 +9,7 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import shioruSitImage from "@/assets/images/shioru-sit.png";
+import shioruSitImage from "@/assets/images/shioru-sit.webp";
 
 import configs from "@/config";
 
