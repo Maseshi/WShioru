@@ -3,6 +3,8 @@ import { useTranslation, Trans } from "react-i18next";
 import { getDatabase, ref, get } from "firebase/database";
 import { WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 
+import shioruImage from "@/assets/images/shioru.webp";
+
 interface Command {
   category: string;
   cooldown: number;
@@ -138,7 +140,7 @@ export default function HomeCommands() {
                                           <div className="avatar">
                                             <div className="mask mask-squircle h-12 w-12">
                                               <img
-                                                src="/android-chrome-512x512.png"
+                                                src={shioruImage}
                                                 alt={t("shioruAvatarAlternate")}
                                               />
                                             </div>
