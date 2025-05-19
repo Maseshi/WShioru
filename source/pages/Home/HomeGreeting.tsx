@@ -52,6 +52,13 @@ export default function HomeGreeting() {
           <img
             className="animate-float mx-auto h-80 w-auto max-w-sm lg:order-last lg:h-auto"
             src={shioruSandImage}
+            srcSet={`
+              ${shioruSandImage} 320w,
+              ${shioruSandImage} 480w,
+              ${shioruSandImage} 768w,
+              ${shioruSandImage} 1024w
+            `}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             fetchPriority="high"
             alt={t("shioruStandAlternate")}
           />
