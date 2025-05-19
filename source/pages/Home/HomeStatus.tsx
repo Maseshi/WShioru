@@ -9,8 +9,6 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 
-import shioruSitImage from "@/assets/images/shioru-sit.webp";
-
 import configs from "@/config";
 
 import { timeAgo } from "@/utils/timeAgo";
@@ -166,12 +164,12 @@ export default function HomeStatus() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <img
             className="animate-breathe mx-auto size-auto max-w-sm self-end lg:order-last"
-            src={shioruSitImage}
+            src="/assets/images/shioru-sit.webp"
             srcSet={`
-              ${shioruSitImage} 320w,
-              ${shioruSitImage} 480w,
-              ${shioruSitImage} 768w,
-              ${shioruSitImage} 1024w
+              /assets/images/shioru-sit.webp 320w,
+              /assets/images/shioru-sit.webp 480w,
+              /assets/images/shioru-sit.webp 768w,
+              /assets/images/shioru-sit.webp 1024w
             `}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             alt={t("shioruSitAlternate")}

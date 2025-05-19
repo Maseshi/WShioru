@@ -3,8 +3,6 @@ import type { JSX } from "react/jsx-runtime";
 import { Link, type LinkProps } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import shioruImage from "@/assets/images/shioru.webp";
-
 export default function HeaderFavicon(
   props: JSX.IntrinsicAttributes & LinkProps & RefAttributes<HTMLAnchorElement>,
 ) {
@@ -15,7 +13,7 @@ export default function HeaderFavicon(
       <div className="avatar">
         <div className="w-10 rounded-full">
           <img
-            src={shioruImage}
+            src="/assets/images/shioru.webp"
             alt={t("shioruAvatarAlternate")}
             width="40px"
             height="40px"

@@ -1,14 +1,11 @@
 import { useTranslation, Trans } from "react-i18next";
 
-import maseshiImage from "@/assets/images/maseshi.webp";
-import shioruImage from "@/assets/images/shioru.webp";
-
 export default function HomeChat() {
   const { t } = useTranslation();
 
   const chats = [
     {
-      avatarURL: maseshiImage,
+      avatarURL: "/assets/images/maseshi.webp",
       username: "Maseshi",
       created_at: "12:45",
       content: (
@@ -16,13 +13,13 @@ export default function HomeChat() {
       ),
     },
     {
-      avatarURL: shioruImage,
+      avatarURL: "/assets/images/shioru.webp",
       username: "Shioru",
       created_at: "12:45",
       content: t("chats.messages.isComing"),
     },
     {
-      avatarURL: maseshiImage,
+      avatarURL: "/assets/images/maseshi.webp",
       username: "Maseshi",
       created_at: "12:46",
       content: (
@@ -33,7 +30,7 @@ export default function HomeChat() {
       ),
     },
     {
-      avatarURL: shioruImage,
+      avatarURL: "/assets/images/shioru.webp",
       username: "Shioru",
       created_at: "12:46",
       content: "ψ(._. )>",
@@ -41,13 +38,13 @@ export default function HomeChat() {
   ];
   const commands = [
     {
-      avatarURL: shioruImage,
+      avatarURL: "/assets/images/shioru.webp",
       username: "Shioru",
       command: "/play",
       description: t("chats.commands.playDescription"),
     },
     {
-      avatarURL: shioruImage,
+      avatarURL: "/assets/images/shioru.webp",
       username: "Shioru",
       command: "/ping",
       description: t("chats.commands.pingDescription"),
