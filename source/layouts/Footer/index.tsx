@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
-import shioruImage from "@/assets/images/shioru.webp";
-
 import { DiscordIcon } from "@/components/Icons/Discord";
 
 import { useAnchorScroller } from "@/hooks/useAnchorScroller";
@@ -19,7 +17,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <img
               className="size-12 rounded-full"
-              src={shioruImage}
+              src="/assets/images/shioru.webp"
               alt={t("shioruAvatarAlternate")}
               width="48px"
               height="48px"

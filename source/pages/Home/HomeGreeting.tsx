@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { useTranslation, Trans } from "react-i18next";
 import { getDatabase, ref, get } from "firebase/database";
 
-import shioruSandImage from "@/assets/images/shioru-stand.webp";
-
 import { DiscordIcon } from "@/components/Icons/Discord";
 
 interface Guild {
@@ -51,12 +49,12 @@ export default function HomeGreeting() {
         <div className="hero-content grid grid-cols-1 lg:grid-cols-2">
           <img
             className="animate-float mx-auto h-80 w-auto max-w-sm lg:order-last lg:h-auto"
-            src={shioruSandImage}
+            src="/assets/images/shioru-stand.webp"
             srcSet={`
-              ${shioruSandImage} 320w,
-              ${shioruSandImage} 480w,
-              ${shioruSandImage} 768w,
-              ${shioruSandImage} 1024w
+              /assets/images/shioru-stand.webp 320w,
+              /assets/images/shioru-stand.webp 480w,
+              /assets/images/shioru-stand.webp 768w,
+              /assets/images/shioru-stand.webp 1024w
             `}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             fetchPriority="high"
