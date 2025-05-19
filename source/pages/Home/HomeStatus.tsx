@@ -167,6 +167,13 @@ export default function HomeStatus() {
           <img
             className="animate-breathe mx-auto size-auto max-w-sm self-end lg:order-last"
             src={shioruSitImage}
+            srcSet={`
+              ${shioruSitImage} 320w,
+              ${shioruSitImage} 480w,
+              ${shioruSitImage} 768w,
+              ${shioruSitImage} 1024w
+            `}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             alt={t("shioruSitAlternate")}
           />
           <div className="text-center lg:order-first">

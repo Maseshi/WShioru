@@ -1,7 +1,7 @@
 {
   "name": "shioru-website",
   "private": true,
-  "version": "2.0.7",
+  "version": "2.0.8",
   "type": "module",
   "scripts": {
     "dev": "firebase emulators:exec --ui \"vite\"",
@@ -40,13 +40,16 @@
     "globals": "^16.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "sharp": "^0.34.1",
+    "svgo": "^3.3.2",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.1",
     "vite": "^6.3.5",
+    "vite-plugin-image-optimizer": "^1.1.8",
     "vite-plugin-sitemap": "^0.8.2"
   },
-  "engines":  {
+  "engines": {
     "node": ">=22.0.0",
     "firebase": "*"
   }
