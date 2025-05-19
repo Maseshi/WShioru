@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
-import shioruImage from "@/assets/images/shioru.webp"
+import shioruImage from "@/assets/images/shioru.webp";
 
 import { DiscordIcon } from "@/components/Icons/Discord";
 

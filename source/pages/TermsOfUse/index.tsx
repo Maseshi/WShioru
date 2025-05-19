@@ -27,10 +27,7 @@ export default function TermsOfUse() {
       <title>{`${t("termsOfUse")} | Shioru's`}</title>
       <meta name="description" content={t("servicesGoal")} />
       <meta property="og:title" content={`${t("termsOfUse")} | Shioru's`} />
-      <meta
-        property="og:description"
-        content={t("servicesGoal")}
-      />
+      <meta property="og:description" content={t("servicesGoal")} />
       <meta property="og:url" content="https://shiorus.web.app/terms-of-use" />
       <header className="hero">
         <div className="hero-content text-center">

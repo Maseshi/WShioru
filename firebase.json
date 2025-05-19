@@ -15,20 +15,7 @@
     "site": "shiorus",
     "public": "dist",
     "cleanUrls": true,
-    "trailingSlash": false,
-    "appAssociation": "AUTO",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "redirects": [
-      {
-        "source": "/invite",
-        "destination": "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
-        "type": 302
-      }
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
@@ -37,46 +24,29 @@
     ],
     "headers": [
       {
-        "source": "**/*",
-        "headers": [
-          {
-            "key": "X-Content-Type-Options",
-            "value": "nosniff"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(html|js|css)",
-        "headers": [
-          {
-            "key": "X-Frame-Options",
-            "value": "SAMEORIGIN"
-          },
-          {
-            "key": "Cache-Control",
-            "value": "no-store, max-age=no-cache"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
             "value": "*"
-          },
-          {
-            "key": "Cache-Control",
-            "value": "max-age=86400000"
           }
         ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|webp|ico)",
+        "source": "**/*.@(jpg|jpeg|gif|png)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=86400000"
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        "regex": ".+/\\w+\\.(jpg|jpeg|gif|png)$",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
           }
         ]
       }

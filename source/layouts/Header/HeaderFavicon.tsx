@@ -3,7 +3,7 @@ import type { JSX } from "react/jsx-runtime";
 import { Link, type LinkProps } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import shioruImage from "@/assets/images/shioru.webp"
+import shioruImage from "@/assets/images/shioru.webp";
 
 export default function HeaderFavicon(
   props: JSX.IntrinsicAttributes & LinkProps & RefAttributes<HTMLAnchorElement>,
