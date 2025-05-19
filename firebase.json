@@ -33,20 +33,20 @@
         ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "source": "**/*.@(js|css)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=7200"
+            "value": "max-age=604800"
           }
         ]
       },
       {
-        "regex": ".+/\\w+\\.(jpg|jpeg|gif|png)$",
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=7200"
+            "value": "max-age=604800"
           }
         ]
       }
