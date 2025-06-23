@@ -30,7 +30,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react-swc": "^3.9.0",
+    "@vitejs/plugin-react-swc": "^3.10.2",
     "daisyui": "^5.0.43",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
