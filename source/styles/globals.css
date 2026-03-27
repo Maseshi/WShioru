@@ -1,5 +1,61 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/Prompt/Prompt-Bold.ttf") format("truetype");
+}
+
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
@@ -28,6 +84,55 @@
     }
     50% {
       transform: scale(1.01);
+    }
+  }
+
+  --animate-wander: wander 8s ease-in-out infinite;
+
+  @keyframes wander {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(6px, -8px);
+    }
+    50% {
+      transform: translate(-4px, 4px);
+    }
+    75% {
+      transform: translate(5px, 6px);
+    }
+  }
+
+  --animate-fade-in-up: fade-in-up 0.5s ease-out both;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-drift: drift 20s ease-in-out infinite;
+
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(30px, -20px) scale(1.05);
+    }
+    50% {
+      transform: translate(-20px, 15px) scale(0.95);
+    }
+    75% {
+      transform: translate(15px, 25px) scale(1.02);
     }
   }
 }

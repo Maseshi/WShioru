@@ -11,7 +11,13 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: "https://shiorus.web.app/",
-      dynamicRoutes: ["/privacy-policy", "/cookie-policy", "/terms-of-use"],
+      dynamicRoutes: [
+        "/home",
+        "/terms-of-use",
+        "/privacy-policy",
+        "/cookie-policy",
+      ],
+      exclude: ["/dashboard", "/dashboard/*"],
       readable: true,
     }),
     tailwindcss(),
