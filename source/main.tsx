@@ -4,7 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
@@ -89,29 +89,29 @@ if (import.meta.env.MODE === "production" && getApps().length <= 1) {
 export default function App() {
   return (
     <Suspense>
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            {/* Public pages with Header + Footer */}
-            <Route path="/" element={<DefaultLayout />}>
-              <Route index element={<Home />} />
-              <Route path="home" element={<Home />} />
-              <Route
-                path="invite"
-                Component={() => {
-                  window.location.replace(
-                    "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
-                  );
-                  return null;
-                }}
-              />
-              <Route path="terms-of-use" element={<TermsOfUse />} />
-              <Route path="privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="cookie-policy" element={<CookiePolicy />} />
-              <Route path="*" element={<NoMatch />} />
-            </Route>
+      <BrowserRouter>
+        <Routes>
+          {/* Public pages with Header + Footer */}
+          <Route path="/" element={<DefaultLayout />}>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route
+              path="invite"
+              Component={() => {
+                window.location.replace(
+                  "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
+                );
+                return null;
+              }}
+            />
+            <Route path="terms-of-use" element={<TermsOfUse />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="cookie-policy" element={<CookiePolicy />} />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
 
-            {/* Dashboard — no Header/Footer */}
+          {/* Dashboard — wrapped in AuthProvider */}
+          <Route element={<AuthProvider><Outlet /></AuthProvider>}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/:guildId" element={<DashboardLayout />}>
               <Route index element={<GuildOverview />} />
@@ -123,9 +123,9 @@ export default function App() {
               <Route path="captcha" element={<CaptchaSettings />} />
               <Route path="chat" element={<ChatSettings />} />
             </Route>
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </Suspense>
   );
 }
