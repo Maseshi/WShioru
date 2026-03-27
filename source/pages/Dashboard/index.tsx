@@ -12,7 +12,7 @@ import DashboardFooter from "@/layouts/Dashboard/Footer";
 
 export default function Dashboard() {
   const { t } = useTranslation();
-  const { user, guilds, loading, error, login, retry } = useAuth();
+  const { user, guilds, loading, error, login, logout, retry } = useAuth();
 
   if (loading) {
     return (
@@ -163,6 +163,41 @@ export default function Dashboard() {
         <div className="animate-drift bg-accent/5 pointer-events-none absolute top-1/2 left-1/2 size-64 -z-10 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" style={{ animationDelay: "-14s" }} />
         <DashboardFooter />
       </Main>
+
+      {/* Logout confirmation modal */}
+      <dialog id="logout-modal" className="modal">
+        <div className="modal-box">
+          <h3 className="text-lg font-bold">
+            {t("dashboard.logoutConfirmTitle", "Logout")}
+          </h3>
+          <p className="text-base-content/60 py-4">
+            {t(
+              "dashboard.logoutConfirmDesc",
+              "Are you sure you want to logout?",
+            )}
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn btn-ghost">
+                {t("dashboard.cancel", "Cancel")}
+              </button>
+            </form>
+            <button
+              className="btn btn-error"
+              onClick={() => {
+                const modal = document.getElementById("logout-modal") as HTMLDialogElement;
+                modal?.close();
+                logout();
+              }}
+            >
+              {t("dashboard.logout", "Logout")}
+            </button>
+          </div>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </>
   );
 }
