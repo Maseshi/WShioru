@@ -18,7 +18,7 @@ export default function ChatSettings() {
   const { t } = useTranslation();
   const { guildId } = useParams();
 
-  const { data, loading, saving, error, save, setData } =
+  const { data, loading, saving, error, save } =
     useGuildSettings<ChatData>(guildId!, "chat", {
       conversations: [],
       alternatives: [],
