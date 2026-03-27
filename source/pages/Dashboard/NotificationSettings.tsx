@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { useGuildSettings } from "@/hooks/useGuildSettings";
-import EmbedBuilder, {
-  defaultEmbed,
-  type EmbedData,
-} from "@/components/EmbedBuilder";
+import EmbedBuilder from "@/components/EmbedBuilder";
+import { defaultEmbed, type EmbedData } from "@/components/EmbedBuilder/types";
 
 interface NotificationEvent {
   enable: boolean;

@@ -1,7 +1,4 @@
 import { useTranslation } from "react-i18next";
-
-export type { EmbedData } from "./types";
-export { defaultEmbed } from "./types";
 import type { EmbedData } from "./types";
 
 interface EmbedBuilderProps {
