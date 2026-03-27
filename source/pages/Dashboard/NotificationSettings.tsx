@@ -238,7 +238,7 @@ export default function NotificationSettings() {
                                       },
                                     }));
                                   } else {
-                                    const { embed: _, ...rest } = event;
+                                    const { embed: _embed, ...rest } = event;
                                     setData((prev) => ({
                                       ...prev,
                                       [eventName]: rest as NotificationEvent,

@@ -30,6 +30,7 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [guildId, path]);
 
   const save = useCallback(
