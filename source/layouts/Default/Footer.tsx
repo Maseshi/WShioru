@@ -30,7 +30,7 @@ export default function Footer() {
           </Link>
         </aside>
         <nav>
-          <h6 className="footer-title">{t("quickLinks")}</h6>
+          <span className="footer-title">{t("quickLinks")}</span>
           <Link className="link link-hover" to="/#features">
             {t("features")}
           </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
           </Link>
         </nav>
         <nav>
-          <h6 className="footer-title">{t("legal")}</h6>
+          <span className="footer-title">{t("legal")}</span>
           <Link className="link link-hover" to="/terms-of-use">
             {t("termsOfUse")}
           </Link>

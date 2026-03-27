@@ -34,6 +34,11 @@ export default function HeaderMenu(
         <Link to="/#status">{t("status")}</Link>
       </li>
       <li className="inline-flex lg:hidden">
+        <Link to="/dashboard">
+          {t("dashboard.title", "Dashboard")}
+        </Link>
+      </li>
+      <li className="inline-flex lg:hidden">
         <Link
           className="btn btn-soft btn-sm btn-primary btn-block"
           to="/invite"
