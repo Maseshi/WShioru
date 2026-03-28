@@ -1,6 +1,8 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { AuthContext, type User, type Guild } from "@/contexts/AuthContext";
 
+import config from "@/config";
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [guilds, setGuilds] = useState<Guild[]>([]);
@@ -14,7 +16,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const fetchMe = async () => {
       try {
         setError(false);
-        const res = await fetch("/api/me", {
+        const res = await fetch(new URL("/api/me", config.apiUrl), {
           credentials: "include",
         });
 
@@ -47,11 +49,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const login = () => {
-    window.location.href = "/auth/login";
+    window.location.href = new URL("/auth/login", config.apiUrl).toString();
   };
 
   const logout = async () => {
-    await fetch("/auth/logout", {
+    await fetch(new URL("/auth/logout", config.apiUrl), {
       method: "POST",
       credentials: "include",
     });
@@ -61,7 +63,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, guilds, loading, error, login, logout, retry }}>
+    <AuthContext.Provider
+      value={{ user, guilds, loading, error, login, logout, retry }}
+    >
       {children}
     </AuthContext.Provider>
   );

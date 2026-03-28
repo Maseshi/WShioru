@@ -1,6 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 
-export function useGuildSettings<T>(guildId: string, path: string, fallback: T) {
+import config from "@/config";
+
+export function useGuildSettings<T>(
+  guildId: string,
+  path: string,
+  fallback: T,
+) {
   const [data, setData] = useState<T>(fallback);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -12,9 +18,12 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
       setError(null);
 
       try {
-        const res = await fetch(`/api/guilds/${guildId}/${path}`, {
-          credentials: "include",
-        });
+        const res = await fetch(
+          new URL(`/api/guilds/${guildId}/${path}`, config.apiUrl),
+          {
+            credentials: "include",
+          },
+        );
 
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
@@ -37,8 +46,8 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
       setError(null);
 
       const url = subPath
-        ? `/api/guilds/${guildId}/${path}/${subPath}`
-        : `/api/guilds/${guildId}/${path}`;
+        ? new URL(`/api/guilds/${guildId}/${path}/${subPath}`, config.apiUrl)
+        : new URL(`/api/guilds/${guildId}/${path}`, config.apiUrl);
 
       try {
         const res = await fetch(url, {
@@ -57,7 +66,7 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
         setSaving(false);
       }
     },
-    [guildId, path]
+    [guildId, path],
   );
 
   return { data, loading, saving, error, save, setData };
