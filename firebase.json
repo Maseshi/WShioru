@@ -22,11 +22,24 @@
     ],
     "rewrites": [
       {
+        "source": "/sitemap.xml",
+        "destination": "/sitemap.xml"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ],
     "headers": [
+      {
+        "source": "/sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          }
+        ]
+      },
       {
         "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
         "headers": [
