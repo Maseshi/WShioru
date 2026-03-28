@@ -9,7 +9,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
 import { getDatabase, connectDatabaseEmulator } from "firebase/database";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
 import { initReactI18next } from "react-i18next";
 
 // Configs
@@ -75,7 +75,7 @@ if (import.meta.env.MODE === "production" && getApps().length <= 1) {
   getAnalytics(app);
   getPerformance(app);
   initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider(configs.recaptcha),
+    provider: new ReCaptchaEnterpriseProvider(configs.recaptcha),
     isTokenAutoRefreshEnabled: true,
   });
 } else if (import.meta.env.MODE !== "production") {
