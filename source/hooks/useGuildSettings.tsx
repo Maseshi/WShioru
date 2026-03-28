@@ -1,7 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
 
-const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
-
 export function useGuildSettings<T>(guildId: string, path: string, fallback: T) {
   const [data, setData] = useState<T>(fallback);
   const [loading, setLoading] = useState(true);
@@ -14,7 +12,7 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
       setError(null);
 
       try {
-        const res = await fetch(`${API_URL}/api/guilds/${guildId}/${path}`, {
+        const res = await fetch(`/api/guilds/${guildId}/${path}`, {
           credentials: "include",
         });
 
@@ -34,12 +32,16 @@ export function useGuildSettings<T>(guildId: string, path: string, fallback: T) 
   }, [guildId, path]);
 
   const save = useCallback(
-    async (body: Partial<T>) => {
+    async (body: Partial<T>, subPath?: string) => {
       setSaving(true);
       setError(null);
 
+      const url = subPath
+        ? `/api/guilds/${guildId}/${path}/${subPath}`
+        : `/api/guilds/${guildId}/${path}`;
+
       try {
-        const res = await fetch(`${API_URL}/api/guilds/${guildId}/${path}`, {
+        const res = await fetch(url, {
           method: "PUT",
           credentials: "include",
           headers: { "Content-Type": "application/json" },

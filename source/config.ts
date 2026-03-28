@@ -10,7 +10,7 @@ const config = {
     measurementId: import.meta.env.VITE_MEASUREMENT_ID,
   },
   recaptcha: import.meta.env.VITE_RECAPTCHA,
-  apiUrl: import.meta.env.VITE_API_URL ?? "http://localhost:3000",
+  apiUrl: import.meta.env.VITE_API_URL,
   statuspageId: "shioru",
 };
 

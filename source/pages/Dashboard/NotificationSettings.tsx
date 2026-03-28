@@ -76,32 +76,15 @@ export default function NotificationSettings() {
   const { t } = useTranslation();
   const { guildId } = useParams();
 
-  const { data, loading, saving, error, setData } =
+  const { data, loading, saving, error, setData, save } =
     useGuildSettings<NotificationData>(guildId!, "notification", {});
 
-  const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
-
   const saveEvent = async (eventName: string, body: Partial<NotificationEvent>) => {
-    try {
-      const res = await fetch(
-        `${API_URL}/api/guilds/${guildId}/notification/${eventName}`,
-        {
-          method: "PUT",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        }
-      );
-
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-      setData((prev) => ({
-        ...prev,
-        [eventName]: { ...getEvent(eventName), ...body },
-      }));
-    } catch {
-      // error handled silently
-    }
+    await save(body as Partial<NotificationData>, eventName);
+    setData((prev) => ({
+      ...prev,
+      [eventName]: { ...getEvent(eventName), ...body },
+    }));
   };
 
   const getEvent = (name: string): NotificationEvent =>
