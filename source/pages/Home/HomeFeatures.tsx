@@ -56,9 +56,9 @@ export default function HomeFeatures() {
             >
               <div className="card-body items-center text-center">
                 <div className="card-actions">
-                  <button className="bg-primary text-primary-content rounded-xl p-4">
+                  <div className="bg-primary text-primary-content rounded-xl p-4">
                     {feature.icon}
-                  </button>
+                  </div>
                 </div>
                 <h3 className="card-title">{feature.title}</h3>
                 <p>{feature.description}</p>

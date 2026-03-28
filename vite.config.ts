@@ -11,7 +11,13 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: "https://shiorus.web.app/",
-      dynamicRoutes: ["/privacy-policy", "/cookie-policy", "/terms-of-use"],
+      dynamicRoutes: [
+        "/home",
+        "/terms-of-use",
+        "/privacy-policy",
+        "/cookie-policy",
+      ],
+      exclude: ["/dashboard", "/dashboard/*"],
       readable: true,
     }),
     tailwindcss(),
@@ -19,5 +25,11 @@ export default defineConfig({
   ],
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "source") }],
+  },
+  server: {
+    proxy: {
+      "/api": process.env.VITE_API_URL || "http://localhost:3000",
+      "/auth": process.env.VITE_API_URL || "http://localhost:3000",
+    },
   },
 });

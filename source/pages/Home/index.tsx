@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import Cookies from "@/components/Cookies";
 
-import Main from "@/layouts/Main";
+import Main from "@/layouts/Default/Main";
 import HomeGreeting from "./HomeGreeting";
 import HomeFeatures from "./HomeFeatures";
 import HomeStats from "./HomeStats";
@@ -10,6 +10,7 @@ import HomeCommands from "./HomeCommands";
 import HomeChat from "./HomeChat";
 import HomeInvite from "./HomeInvite";
 import HomeStatus from "./HomeStatus";
+import HomeDashboard from "./HomeDashboard";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ export default function Home() {
         <HomeFeatures />
         <HomeStats />
         <HomeCommands />
+        <HomeDashboard />
         <HomeChat />
         <HomeStatus />
         <HomeInvite />

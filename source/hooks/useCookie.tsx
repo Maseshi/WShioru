@@ -9,7 +9,7 @@ type CookieOptions = {
   sameSite?: "lax" | "strict" | "none";
 };
 
-function setCookie(name: string, value: string, options: CookieOptions = {}) {
+function setCookieRaw(name: string, value: string, options: CookieOptions = {}) {
   let cookieStr = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
   if (options.expires) {
@@ -28,21 +28,28 @@ function setCookie(name: string, value: string, options: CookieOptions = {}) {
   document.cookie = cookieStr;
 }
 
-function getCookie(name: string): string | null {
+function getCookieRaw(name: string): string | null {
   const match = document.cookie.match(
     new RegExp("(?:^|; )" + encodeURIComponent(name) + "=([^;]*)"),
   );
   return match ? decodeURIComponent(match[1]) : null;
 }
 
-function removeCookie(name: string, options: CookieOptions = {}) {
-  setCookie(name, "", { ...options, expires: new Date(0) });
-}
-
 export function useCookie() {
-  const get = useCallback(getCookie, []);
-  const set = useCallback(setCookie, []);
-  const remove = useCallback(removeCookie, []);
+  const get = useCallback(
+    (name: string) => getCookieRaw(name),
+    [],
+  );
+  const set = useCallback(
+    (name: string, value: string, options?: CookieOptions) =>
+      setCookieRaw(name, value, options),
+    [],
+  );
+  const remove = useCallback(
+    (name: string, options?: CookieOptions) =>
+      setCookieRaw(name, "", { ...options, expires: new Date(0) }),
+    [],
+  );
 
   return { get, set, remove };
 }

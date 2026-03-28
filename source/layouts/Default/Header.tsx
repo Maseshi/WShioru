@@ -77,6 +77,12 @@ export default function Header() {
             <MoonIcon className={`swap-${isDarkMode ? "off" : "on"} size-5`} />
           </label>
           <Link
+            className="btn btn-ghost hidden lg:inline-flex"
+            to="/dashboard"
+          >
+            {t("dashboard.title", "Dashboard")}
+          </Link>
+          <Link
             className="btn btn-soft btn-primary hidden lg:inline-flex"
             to="/invite"
           >
