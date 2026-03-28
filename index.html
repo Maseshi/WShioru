@@ -32,11 +32,37 @@
     <meta name="twitter:description" content="Shioru is a versatile Discord bot assistant that helps manage your server with music, moderation, notifications, and more." />
     <meta name="twitter:image" content="https://shiorus.web.app/assets/images/cover.png" />
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Shioru",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "description": "Shioru is a versatile Discord bot assistant that helps manage your server with music, moderation, notifications, and more.",
+      "url": "https://shiorus.web.app/",
+      "image": "https://shiorus.web.app/assets/images/cover.png",
+      "author": {
+        "@type": "Person",
+        "name": "Chaiwat Suwannarat"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/assets/fonts/Prompt/Prompt-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/assets/fonts/Prompt/Prompt-SemiBold.ttf" as="font" type="font/ttf" crossorigin />
   </head>
   <body>
     <div id="root"></div>

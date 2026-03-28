@@ -1,5 +1,11 @@
 {
   "shioruAvatarAlternate": "รูปโปรไฟล์ของ Shioru",
+  "notFound": {
+    "title": "ไม่พบหน้านี้",
+    "heading": "มันหายไป!",
+    "description": "เราพยายามหาหน้านี้ทุกซอกทุกมุมแล้ว แต่ก็ไม่เจออะไรเลย",
+    "backHome": "กลับดีกว่า"
+  },
   "features": "คุณสมบัติ",
   "stats": "สถิติ",
   "commands": "คำสั่ง",

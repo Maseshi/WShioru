@@ -26,4 +26,10 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "source") }],
   },
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000",
+      "/auth": "http://localhost:3000",
+    },
+  },
 });

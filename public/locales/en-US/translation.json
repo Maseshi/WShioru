@@ -1,5 +1,11 @@
 {
   "shioruAvatarAlternate": "Shioru profile",
+  "notFound": {
+    "title": "Page Not Found",
+    "heading": "It's gone!",
+    "description": "We searched every corner for this page, but found nothing.",
+    "backHome": "Go back"
+  },
   "features": "Features",
   "stats": "Stats",
   "commands": "Commands",
