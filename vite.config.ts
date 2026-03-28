@@ -26,10 +26,4 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "source") }],
   },
-  server: {
-    proxy: {
-      "/api": process.env.VITE_API_URL || "http://localhost:3000",
-      "/auth": process.env.VITE_API_URL || "http://localhost:3000",
-    },
-  },
 });

@@ -13,6 +13,7 @@ env:
   VITE_APP_ID: ${{ secrets.APP_ID }}
   VITE_MEASUREMENT_ID: ${{ secrets.MEASUREMENT_ID }}
   VITE_RECAPTCHA: ${{ secrets.RECAPTCHA }}
+  VITE_API_URL: ${{ secrets.API_URL }}
 permissions:
   checks: write
   contents: read
