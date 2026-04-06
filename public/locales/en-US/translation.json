@@ -102,7 +102,7 @@
   "homeDashboard": {
     "badge": "Web Dashboard",
     "title": "Manage Everything From <1>Browser</1>",
-    "subtitle": "No commands needed. Configure your bot visually with a powerful web dashboard — adjust language, notifications, DJ mode, chat system, security, leaderboard and more without typing a single command.",
+    "subtitle": "No commands needed. Configure your bot visually with a powerful web dashboard - adjust language, notifications, DJ mode, chat system, security, leaderboard and more without typing a single command.",
     "language": "Language Settings",
     "languageDesc": "Set the bot's language per server.",
     "djs": "DJ Mode",
