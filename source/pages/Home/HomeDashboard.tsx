@@ -85,7 +85,7 @@ export default function HomeDashboard() {
     <section className="bg-primary/5 py-16" id="dashboard">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          {/* Left — Floating overlapping cards */}
+          {/* Left - Floating overlapping cards */}
           <div className="relative h-[420px] lg:order-first">
             {features.map((feature, index) => {
               // Position cards in a scattered layout
@@ -127,7 +127,7 @@ export default function HomeDashboard() {
             })}
           </div>
 
-          {/* Right — Title + description + CTA */}
+          {/* Right - Title + description + CTA */}
           <div className="text-center lg:order-last lg:text-right">
             <div className="py-4 text-5xl font-bold lg:text-right">🎛️</div>
             <h2 className="text-4xl font-bold">

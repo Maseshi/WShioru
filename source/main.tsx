@@ -110,7 +110,7 @@ export default function App() {
             <Route path="*" element={<NoMatch />} />
           </Route>
 
-          {/* Dashboard — wrapped in AuthProvider */}
+          {/* Dashboard - wrapped in AuthProvider */}
           <Route element={<AuthProvider><Outlet /></AuthProvider>}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/:guildId" element={<DashboardLayout />}>
