@@ -55,7 +55,8 @@
     "none": "All Systems Operational",
     "minor": "Partially Degraded Service",
     "major": "Partial System Outage",
-    "critical": "Total System Failure"
+    "critical": "Total System Failure",
+    "maintenance": "Under Maintenance"
   },
   "lastUpdatedAt": "Last updated at {{date}}",
   "components": "Components",

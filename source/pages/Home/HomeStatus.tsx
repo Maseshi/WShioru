@@ -45,11 +45,12 @@ interface Summary {
   };
   components: Component[];
   status: {
-    indicator: "none" | "minor" | "major" | "critical";
+    indicator: "none" | "minor" | "major" | "critical" | "under_maintenance";
     description:
       | "All Systems Operational"
       | "Partially Degraded Service"
-      | "Partial System Outage";
+      | "Partial System Outage"
+      | "Under Maintenance";
   };
 }
 
@@ -65,18 +66,21 @@ export default function HomeStatus() {
     minor: "bg-info/20",
     major: "bg-warning/20",
     critical: "bg-error/20",
+    under_maintenance: "bg-info/20",
   };
   const statusStyle = {
     none: "status-success",
     minor: "status-info",
     major: "status-warning",
     critical: "status-error",
+    under_maintenance: "status-info",
   };
   const textStyle = {
     none: "text-success",
     minor: "text-info",
     major: "text-warning",
     critical: "text-error",
+    under_maintenance: "text-info",
   };
   const badgeStyle = {
     operational: "badge-success",
