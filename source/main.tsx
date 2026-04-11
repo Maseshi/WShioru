@@ -4,12 +4,21 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
 import { getDatabase, connectDatabaseEmulator } from "firebase/database";
-import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
+import {
+  initializeAppCheck,
+  ReCaptchaEnterpriseProvider,
+} from "firebase/app-check";
 import { initReactI18next } from "react-i18next";
 
 // Configs
@@ -97,12 +106,12 @@ export default function App() {
             <Route path="home" element={<Home />} />
             <Route
               path="invite"
-              Component={() => {
-                window.location.replace(
-                  "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
-                );
-                return null;
-              }}
+              element={
+                <Navigate
+                  to="https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands"
+                  replace
+                />
+              }
             />
             <Route path="terms-of-use" element={<TermsOfUse />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
@@ -111,7 +120,13 @@ export default function App() {
           </Route>
 
           {/* Dashboard - wrapped in AuthProvider */}
-          <Route element={<AuthProvider><Outlet /></AuthProvider>}>
+          <Route
+            element={
+              <AuthProvider>
+                <Outlet />
+              </AuthProvider>
+            }
+          >
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/:guildId" element={<DashboardLayout />}>
               <Route index element={<GuildOverview />} />

@@ -20,6 +20,13 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/invite",
+        "destination": "https://discord.com/oauth2/authorize?client_id=704706906505347183&permissions=8&scope=bot+applications.commands",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "/sitemap.xml",
